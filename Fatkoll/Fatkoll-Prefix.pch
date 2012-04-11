@@ -8,7 +8,11 @@
 #warning "This project uses features only available in iOS SDK 4.0 and later."
 #endif
 
+#define PEW_FATKOLL_KEY @"4534ae4998ff19987fe343baa399800aea3f"
+
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import "NSJSONSerialization+PEWFatkoll.h"
 #endif

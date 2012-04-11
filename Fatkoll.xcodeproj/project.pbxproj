@@ -13,14 +13,14 @@
 		A6D295CB153600A70099FD6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D295C9153600A70099FD6C /* InfoPlist.strings */; };
 		A6D295CD153600A70099FD6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295CC153600A70099FD6C /* main.m */; };
 		A6D295D1153600A70099FD6C /* PEWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295D0153600A70099FD6C /* PEWAppDelegate.m */; };
-		A6D295D4153600A70099FD6C /* PEWFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295D3153600A70099FD6C /* PEWFirstViewController.m */; };
+		A6D295D4153600A70099FD6C /* PEWPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295D3153600A70099FD6C /* PEWPlacesTableViewController.m */; };
 		A6D295D6153600A70099FD6C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295D5153600A70099FD6C /* first.png */; };
 		A6D295D8153600A70099FD6C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295D7153600A70099FD6C /* first@2x.png */; };
-		A6D295DB153600A70099FD6C /* PEWSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295DA153600A70099FD6C /* PEWSecondViewController.m */; };
-		A6D295DD153600A70099FD6C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295DC153600A70099FD6C /* second.png */; };
-		A6D295DF153600A70099FD6C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295DE153600A70099FD6C /* second@2x.png */; };
-		A6D295E2153600A70099FD6C /* PEWFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */; };
-		A6D295E5153600A70099FD6C /* PEWSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */; };
+		A6D295F0153604570099FD6C /* PEWPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295EF153604570099FD6C /* PEWPlace.m */; };
+		A6D295F21536050F0099FD6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295F11536050F0099FD6C /* CoreLocation.framework */; };
+		A6D295F515360C140099FD6C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D295F715360C140099FD6C /* Localizable.strings */; };
+		A6D295FB15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */; };
+		A6D295FD15360DA60099FD6C /* README in Resources */ = {isa = PBXBuildFile; fileRef = A6D295FC15360DA60099FD6C /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +28,24 @@
 		A6D295C0153600A70099FD6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A6D295C2153600A70099FD6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A6D295C4153600A70099FD6C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A6D295C8153600A70099FD6C /* Fatkoll-Info.plist */ = {isa = PBXFileReference; path = "Fatkoll-Info.plist"; sourceTree = "<group>"; };
+		A6D295C8153600A70099FD6C /* Fatkoll-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fatkoll-Info.plist"; sourceTree = "<group>"; };
 		A6D295CA153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A6D295CC153600A70099FD6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6D295CE153600A70099FD6C /* Fatkoll-Prefix.pch */ = {isa = PBXFileReference; path = "Fatkoll-Prefix.pch"; sourceTree = "<group>"; };
-		A6D295CF153600A70099FD6C /* PEWAppDelegate.h */ = {isa = PBXFileReference; path = PEWAppDelegate.h; sourceTree = "<group>"; };
+		A6D295CE153600A70099FD6C /* Fatkoll-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fatkoll-Prefix.pch"; sourceTree = "<group>"; };
+		A6D295CF153600A70099FD6C /* PEWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEWAppDelegate.h; sourceTree = "<group>"; };
 		A6D295D0153600A70099FD6C /* PEWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWAppDelegate.m; sourceTree = "<group>"; };
-		A6D295D2153600A70099FD6C /* PEWFirstViewController.h */ = {isa = PBXFileReference; path = PEWFirstViewController.h; sourceTree = "<group>"; };
-		A6D295D3153600A70099FD6C /* PEWFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWFirstViewController.m; sourceTree = "<group>"; };
+		A6D295D2153600A70099FD6C /* PEWPlacesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEWPlacesTableViewController.h; sourceTree = "<group>"; };
+		A6D295D3153600A70099FD6C /* PEWPlacesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWPlacesTableViewController.m; sourceTree = "<group>"; };
 		A6D295D5153600A70099FD6C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		A6D295D7153600A70099FD6C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		A6D295D9153600A70099FD6C /* PEWSecondViewController.h */ = {isa = PBXFileReference; path = PEWSecondViewController.h; sourceTree = "<group>"; };
-		A6D295DA153600A70099FD6C /* PEWSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWSecondViewController.m; sourceTree = "<group>"; };
-		A6D295DC153600A70099FD6C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		A6D295DE153600A70099FD6C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		A6D295E1153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PEWFirstViewController.xib; sourceTree = "<group>"; };
-		A6D295E4153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PEWSecondViewController.xib; sourceTree = "<group>"; };
+		A6D295EE153604570099FD6C /* PEWPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWPlace.h; sourceTree = "<group>"; };
+		A6D295EF153604570099FD6C /* PEWPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWPlace.m; sourceTree = "<group>"; };
+		A6D295F11536050F0099FD6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A6D295F615360C140099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A6D295F815360C220099FD6C /* sv-SE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sv-SE"; path = "sv-SE.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A6D295F915360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+PEWFatkoll.h"; sourceTree = "<group>"; };
+		A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+PEWFatkoll.m"; sourceTree = "<group>"; };
+		A6D295FC15360DA60099FD6C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D295F21536050F0099FD6C /* CoreLocation.framework in Frameworks */,
 				A6D295C1153600A70099FD6C /* UIKit.framework in Frameworks */,
 				A6D295C3153600A70099FD6C /* Foundation.framework in Frameworks */,
 				A6D295C5153600A70099FD6C /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +66,7 @@
 		A6D295B1153600A60099FD6C = {
 			isa = PBXGroup;
 			children = (
+				A6D295FC15360DA60099FD6C /* README */,
 				A6D295C6153600A70099FD6C /* Fatkoll */,
 				A6D295BF153600A70099FD6C /* Frameworks */,
 				A6D295BD153600A70099FD6C /* Products */,
@@ -80,6 +84,7 @@
 		A6D295BF153600A70099FD6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6D295F11536050F0099FD6C /* CoreLocation.framework */,
 				A6D295C0153600A70099FD6C /* UIKit.framework */,
 				A6D295C2153600A70099FD6C /* Foundation.framework */,
 				A6D295C4153600A70099FD6C /* CoreGraphics.framework */,
@@ -90,18 +95,13 @@
 		A6D295C6153600A70099FD6C /* Fatkoll */ = {
 			isa = PBXGroup;
 			children = (
+				A6D295EB153600E60099FD6C /* Model */,
+				A6D295ED153600F40099FD6C /* View */,
+				A6D295EC153600EC0099FD6C /* Controller */,
 				A6D295CF153600A70099FD6C /* PEWAppDelegate.h */,
 				A6D295D0153600A70099FD6C /* PEWAppDelegate.m */,
-				A6D295D2153600A70099FD6C /* PEWFirstViewController.h */,
-				A6D295D3153600A70099FD6C /* PEWFirstViewController.m */,
 				A6D295D5153600A70099FD6C /* first.png */,
 				A6D295D7153600A70099FD6C /* first@2x.png */,
-				A6D295D9153600A70099FD6C /* PEWSecondViewController.h */,
-				A6D295DA153600A70099FD6C /* PEWSecondViewController.m */,
-				A6D295DC153600A70099FD6C /* second.png */,
-				A6D295DE153600A70099FD6C /* second@2x.png */,
-				A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */,
-				A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */,
 				A6D295C7153600A70099FD6C /* Supporting Files */,
 			);
 			path = Fatkoll;
@@ -114,8 +114,36 @@
 				A6D295C9153600A70099FD6C /* InfoPlist.strings */,
 				A6D295CC153600A70099FD6C /* main.m */,
 				A6D295CE153600A70099FD6C /* Fatkoll-Prefix.pch */,
+				A6D295F715360C140099FD6C /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6D295EB153600E60099FD6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295F915360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.h */,
+				A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */,
+				A6D295EE153604570099FD6C /* PEWPlace.h */,
+				A6D295EF153604570099FD6C /* PEWPlace.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A6D295EC153600EC0099FD6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A6D295ED153600F40099FD6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295D2153600A70099FD6C /* PEWPlacesTableViewController.h */,
+				A6D295D3153600A70099FD6C /* PEWPlacesTableViewController.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +181,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"sv-SE",
 			);
 			mainGroup = A6D295B1153600A60099FD6C;
 			productRefGroup = A6D295BD153600A70099FD6C /* Products */;
@@ -172,10 +201,8 @@
 				A6D295CB153600A70099FD6C /* InfoPlist.strings in Resources */,
 				A6D295D6153600A70099FD6C /* first.png in Resources */,
 				A6D295D8153600A70099FD6C /* first@2x.png in Resources */,
-				A6D295DD153600A70099FD6C /* second.png in Resources */,
-				A6D295DF153600A70099FD6C /* second@2x.png in Resources */,
-				A6D295E2153600A70099FD6C /* PEWFirstViewController.xib in Resources */,
-				A6D295E5153600A70099FD6C /* PEWSecondViewController.xib in Resources */,
+				A6D295F515360C140099FD6C /* Localizable.strings in Resources */,
+				A6D295FD15360DA60099FD6C /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +215,9 @@
 			files = (
 				A6D295CD153600A70099FD6C /* main.m in Sources */,
 				A6D295D1153600A70099FD6C /* PEWAppDelegate.m in Sources */,
-				A6D295D4153600A70099FD6C /* PEWFirstViewController.m in Sources */,
-				A6D295DB153600A70099FD6C /* PEWSecondViewController.m in Sources */,
+				A6D295D4153600A70099FD6C /* PEWPlacesTableViewController.m in Sources */,
+				A6D295F0153604570099FD6C /* PEWPlace.m in Sources */,
+				A6D295FB15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,20 +232,13 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */ = {
+		A6D295F715360C140099FD6C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A6D295E1153600A70099FD6C /* en */,
+				A6D295F615360C140099FD6C /* en */,
+				A6D295F815360C220099FD6C /* sv-SE */,
 			);
-			name = PEWFirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6D295E4153600A70099FD6C /* en */,
-			);
-			name = PEWSecondViewController.xib;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
