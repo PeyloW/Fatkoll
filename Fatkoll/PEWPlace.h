@@ -12,8 +12,9 @@
 
 @property (nonatomic, assign) NSInteger placeID;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *cityName;
+@property (nonatomic, assign) NSInteger cityID;
 @property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSString *cityName;
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, copy) NSString *openHours;
 @property (nonatomic, assign) NSUInteger numberOfTaps;

@@ -12,8 +12,9 @@
 
 @synthesize placeID = _placeID;
 @synthesize name = _name;
-@synthesize cityName = _cityName;
+@synthesize cityID = _cityID;
 @synthesize address = _address;
+@synthesize cityName = _cityName;
 @synthesize location = _location;
 @synthesize openHours = _openHours;
 @synthesize numberOfTaps = _numberOfTaps;
@@ -31,7 +32,7 @@
                                                                                        error:&error];
                        if (json) {
                            places = [NSMutableArray array];
-                           for (NSString *placeJSON in [json objectForKey:@"list"]) {
+                           for (id placeJSON in [json objectForKey:@"list"]) {
                                PEWPlace *place = [[self alloc] initWithJSONObject:placeJSON];
                                [places addObject:place];
                            }
@@ -49,8 +50,9 @@
     if (self) {
         self.placeID = [[json objectForKey:@"id"] integerValue];
         self.name = [json objectForKey:@"name"];
-        self.cityName = [json objectForKey:@"city"];
+        self.cityID = [[json objectForKey:@"city_id"] integerValue];
         self.address = [json objectForKey:@"address"];
+        self.cityName = [json objectForKey:@"city"];
         self.location = [[CLLocation alloc] initWithLatitude:[[json objectForKey:@"lat"] doubleValue]
                                                    longitude:[[json objectForKey:@"lng"] doubleValue]];
         self.openHours = [json objectForKey:@"openhours"];

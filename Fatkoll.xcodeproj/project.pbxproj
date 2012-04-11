@@ -21,6 +21,7 @@
 		A6D295F515360C140099FD6C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D295F715360C140099FD6C /* Localizable.strings */; };
 		A6D295FB15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */; };
 		A6D295FD15360DA60099FD6C /* README in Resources */ = {isa = PBXBuildFile; fileRef = A6D295FC15360DA60099FD6C /* README */; };
+		A6D2960015360FA60099FD6C /* PEWCity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295FF15360FA60099FD6C /* PEWCity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		A6D295F915360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+PEWFatkoll.h"; sourceTree = "<group>"; };
 		A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+PEWFatkoll.m"; sourceTree = "<group>"; };
 		A6D295FC15360DA60099FD6C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A6D295FE15360FA60099FD6C /* PEWCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWCity.h; sourceTree = "<group>"; };
+		A6D295FF15360FA60099FD6C /* PEWCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWCity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */,
 				A6D295EE153604570099FD6C /* PEWPlace.h */,
 				A6D295EF153604570099FD6C /* PEWPlace.m */,
+				A6D295FE15360FA60099FD6C /* PEWCity.h */,
+				A6D295FF15360FA60099FD6C /* PEWCity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				A6D295D4153600A70099FD6C /* PEWPlacesTableViewController.m in Sources */,
 				A6D295F0153604570099FD6C /* PEWPlace.m in Sources */,
 				A6D295FB15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m in Sources */,
+				A6D2960015360FA60099FD6C /* PEWCity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
