@@ -21,6 +21,8 @@
 @property (nonatomic, copy) NSURL *URL;
 
 + (void)fetchAllPlacesWithCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
++ (void)fetchPlacesForCityID:(NSInteger)cityID withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
++ (void)fetchPlacesWithMaximumDistance:(CLLocationDistance)distance fromLocation:(CLLocation *)location withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
 
 - (id)initWithJSONObject:(id)json;
 

@@ -20,14 +20,13 @@
 @synthesize numberOfTaps = _numberOfTaps;
 @synthesize URL = _url;
 
-+ (void)fetchAllPlacesWithCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
++ (void)fetchPlacesForURL:(NSURL *)url withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
 {
     NSParameterAssert(handler != NULL);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                    ^{
                        NSMutableArray *places = nil;
                        NSError *error = nil;
-                       NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fatkoll.se/json/1.0/getPlaces.json?api_key=%@", PEW_FATKOLL_KEY]];
                        NSDictionary *json = [NSJSONSerialization JSONObjectWithContentsOfURL:url
                                                                                        error:&error];
                        if (json) {
@@ -42,6 +41,24 @@
                                           handler(places, error);
                                       });
                    });
+}
+
++ (void)fetchAllPlacesWithCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fatkoll.se/json/1.0/getPlaces.json?api_key=%@", PEW_FATKOLL_KEY]];
+    [self fetchPlacesForURL:url withCompletionHandler:handler];
+}
+
++ (void)fetchPlacesForCityID:(NSInteger)cityID withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fatkoll.se/json/1.0/getPlaces.json?api_key=%@&city_id=%d", PEW_FATKOLL_KEY, cityID]];
+    [self fetchPlacesForURL:url withCompletionHandler:handler];
+}
+
++ (void)fetchPlacesWithMaximumDistance:(CLLocationDistance)distance fromLocation:(CLLocation *)location withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fatkoll.se/json/1.0/getPlaces.json?api_key=%@&lat=%.7f&lng=%.7f&dist_km=%d", PEW_FATKOLL_KEY, location.coordinate.latitude, location.coordinate.longitude, (int)distance / 1000]];
+    [self fetchPlacesForURL:url withCompletionHandler:handler];
 }
 
 - (id)initWithJSONObject:(id)json;
