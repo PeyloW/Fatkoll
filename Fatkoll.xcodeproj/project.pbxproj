@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6D295C1153600A70099FD6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C0153600A70099FD6C /* UIKit.framework */; };
+		A6D295C3153600A70099FD6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C2153600A70099FD6C /* Foundation.framework */; };
+		A6D295C5153600A70099FD6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C4153600A70099FD6C /* CoreGraphics.framework */; };
+		A6D295CB153600A70099FD6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D295C9153600A70099FD6C /* InfoPlist.strings */; };
+		A6D295CD153600A70099FD6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295CC153600A70099FD6C /* main.m */; };
+		A6D295D1153600A70099FD6C /* PEWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295D0153600A70099FD6C /* PEWAppDelegate.m */; };
+		A6D295D4153600A70099FD6C /* PEWFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295D3153600A70099FD6C /* PEWFirstViewController.m */; };
+		A6D295D6153600A70099FD6C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295D5153600A70099FD6C /* first.png */; };
+		A6D295D8153600A70099FD6C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295D7153600A70099FD6C /* first@2x.png */; };
+		A6D295DB153600A70099FD6C /* PEWSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D295DA153600A70099FD6C /* PEWSecondViewController.m */; };
+		A6D295DD153600A70099FD6C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295DC153600A70099FD6C /* second.png */; };
+		A6D295DF153600A70099FD6C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D295DE153600A70099FD6C /* second@2x.png */; };
+		A6D295E2153600A70099FD6C /* PEWFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */; };
+		A6D295E5153600A70099FD6C /* PEWSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A6D295BC153600A70099FD6C /* Fatkoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fatkoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D295C0153600A70099FD6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6D295C2153600A70099FD6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A6D295C4153600A70099FD6C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A6D295C8153600A70099FD6C /* Fatkoll-Info.plist */ = {isa = PBXFileReference; path = "Fatkoll-Info.plist"; sourceTree = "<group>"; };
+		A6D295CA153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A6D295CC153600A70099FD6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6D295CE153600A70099FD6C /* Fatkoll-Prefix.pch */ = {isa = PBXFileReference; path = "Fatkoll-Prefix.pch"; sourceTree = "<group>"; };
+		A6D295CF153600A70099FD6C /* PEWAppDelegate.h */ = {isa = PBXFileReference; path = PEWAppDelegate.h; sourceTree = "<group>"; };
+		A6D295D0153600A70099FD6C /* PEWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWAppDelegate.m; sourceTree = "<group>"; };
+		A6D295D2153600A70099FD6C /* PEWFirstViewController.h */ = {isa = PBXFileReference; path = PEWFirstViewController.h; sourceTree = "<group>"; };
+		A6D295D3153600A70099FD6C /* PEWFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWFirstViewController.m; sourceTree = "<group>"; };
+		A6D295D5153600A70099FD6C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		A6D295D7153600A70099FD6C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		A6D295D9153600A70099FD6C /* PEWSecondViewController.h */ = {isa = PBXFileReference; path = PEWSecondViewController.h; sourceTree = "<group>"; };
+		A6D295DA153600A70099FD6C /* PEWSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEWSecondViewController.m; sourceTree = "<group>"; };
+		A6D295DC153600A70099FD6C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		A6D295DE153600A70099FD6C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A6D295E1153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PEWFirstViewController.xib; sourceTree = "<group>"; };
+		A6D295E4153600A70099FD6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PEWSecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6D295B9153600A60099FD6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D295C1153600A70099FD6C /* UIKit.framework in Frameworks */,
+				A6D295C3153600A70099FD6C /* Foundation.framework in Frameworks */,
+				A6D295C5153600A70099FD6C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6D295B1153600A60099FD6C = {
+			isa = PBXGroup;
+			children = (
+				A6D295C6153600A70099FD6C /* Fatkoll */,
+				A6D295BF153600A70099FD6C /* Frameworks */,
+				A6D295BD153600A70099FD6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6D295BD153600A70099FD6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295BC153600A70099FD6C /* Fatkoll.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6D295BF153600A70099FD6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295C0153600A70099FD6C /* UIKit.framework */,
+				A6D295C2153600A70099FD6C /* Foundation.framework */,
+				A6D295C4153600A70099FD6C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6D295C6153600A70099FD6C /* Fatkoll */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295CF153600A70099FD6C /* PEWAppDelegate.h */,
+				A6D295D0153600A70099FD6C /* PEWAppDelegate.m */,
+				A6D295D2153600A70099FD6C /* PEWFirstViewController.h */,
+				A6D295D3153600A70099FD6C /* PEWFirstViewController.m */,
+				A6D295D5153600A70099FD6C /* first.png */,
+				A6D295D7153600A70099FD6C /* first@2x.png */,
+				A6D295D9153600A70099FD6C /* PEWSecondViewController.h */,
+				A6D295DA153600A70099FD6C /* PEWSecondViewController.m */,
+				A6D295DC153600A70099FD6C /* second.png */,
+				A6D295DE153600A70099FD6C /* second@2x.png */,
+				A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */,
+				A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */,
+				A6D295C7153600A70099FD6C /* Supporting Files */,
+			);
+			path = Fatkoll;
+			sourceTree = "<group>";
+		};
+		A6D295C7153600A70099FD6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6D295C8153600A70099FD6C /* Fatkoll-Info.plist */,
+				A6D295C9153600A70099FD6C /* InfoPlist.strings */,
+				A6D295CC153600A70099FD6C /* main.m */,
+				A6D295CE153600A70099FD6C /* Fatkoll-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6D295BB153600A60099FD6C /* Fatkoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6D295E8153600A70099FD6C /* Build configuration list for PBXNativeTarget "Fatkoll" */;
+			buildPhases = (
+				A6D295B8153600A60099FD6C /* Sources */,
+				A6D295B9153600A60099FD6C /* Frameworks */,
+				A6D295BA153600A60099FD6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fatkoll;
+			productName = Fatkoll;
+			productReference = A6D295BC153600A70099FD6C /* Fatkoll.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6D295B3153600A60099FD6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PEW;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A6D295B6153600A60099FD6C /* Build configuration list for PBXProject "Fatkoll" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A6D295B1153600A60099FD6C;
+			productRefGroup = A6D295BD153600A70099FD6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6D295BB153600A60099FD6C /* Fatkoll */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6D295BA153600A60099FD6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D295CB153600A70099FD6C /* InfoPlist.strings in Resources */,
+				A6D295D6153600A70099FD6C /* first.png in Resources */,
+				A6D295D8153600A70099FD6C /* first@2x.png in Resources */,
+				A6D295DD153600A70099FD6C /* second.png in Resources */,
+				A6D295DF153600A70099FD6C /* second@2x.png in Resources */,
+				A6D295E2153600A70099FD6C /* PEWFirstViewController.xib in Resources */,
+				A6D295E5153600A70099FD6C /* PEWSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6D295B8153600A60099FD6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D295CD153600A70099FD6C /* main.m in Sources */,
+				A6D295D1153600A70099FD6C /* PEWAppDelegate.m in Sources */,
+				A6D295D4153600A70099FD6C /* PEWFirstViewController.m in Sources */,
+				A6D295DB153600A70099FD6C /* PEWSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6D295C9153600A70099FD6C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D295CA153600A70099FD6C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A6D295E0153600A70099FD6C /* PEWFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D295E1153600A70099FD6C /* en */,
+			);
+			name = PEWFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		A6D295E3153600A70099FD6C /* PEWSecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D295E4153600A70099FD6C /* en */,
+			);
+			name = PEWSecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6D295E6153600A70099FD6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6D295E7153600A70099FD6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6D295E9153600A70099FD6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fatkoll/Fatkoll-Prefix.pch";
+				INFOPLIST_FILE = "Fatkoll/Fatkoll-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A6D295EA153600A70099FD6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fatkoll/Fatkoll-Prefix.pch";
+				INFOPLIST_FILE = "Fatkoll/Fatkoll-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6D295B6153600A60099FD6C /* Build configuration list for PBXProject "Fatkoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D295E6153600A70099FD6C /* Debug */,
+				A6D295E7153600A70099FD6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6D295E8153600A70099FD6C /* Build configuration list for PBXNativeTarget "Fatkoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D295E9153600A70099FD6C /* Debug */,
+				A6D295EA153600A70099FD6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6D295B3153600A60099FD6C /* Project object */;
+}
