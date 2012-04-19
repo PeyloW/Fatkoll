@@ -3,7 +3,7 @@
 //  Fatkoll
 //
 //  Created by Fredrik Olsson on 2012-04-11.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Fredrik Olsson. All rights reserved.
 //
 
 #import "PEWCity.h"
@@ -43,7 +43,7 @@
     if (self) {
         self.cityID = [[json objectForKey:@"id"] integerValue];
         self.name = [json objectForKey:@"name"];
-        self.numberOfPlaces = [[json objectForKey:@"places_count"] unsignedIntegerValue];
+        self.numberOfPlaces = [[json objectForKey:@"places_count"] integerValue];
     }
     return self;
 }

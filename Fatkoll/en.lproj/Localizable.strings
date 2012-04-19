@@ -7,3 +7,7 @@
 */
 
 "ALL_PLACES" = "All Places";
+"ALL_CITIES" = "All Cities";
+
+"OPEN_F" = "Open %@";
+"IS_ON_TAP" = "From tap";

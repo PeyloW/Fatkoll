@@ -7,28 +7,29 @@
 //
 
 #import "PEWPlacesTableViewController.h"
-
+#import "PEWPlaceViewControler.h"
 
 @implementation PEWPlacesTableViewController
 
 @synthesize places = _places;
 
-- (id)init;
+- (void)setPlaces:(NSArray *)places;
+{
+    _places = places;
+    if ([self isViewLoaded]) {
+        [self.tableView reloadData];
+    }
+}
+			
+- (id)initWithTitle:(NSString *)title;
 {
     self = [super init];
     if (self) {
-        self.title = NSLocalizedString(@"ALL_PLACES", nil);
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        [PEWPlace fetchAllPlacesWithCompletionHandler:^(NSArray *places, NSError *error) {
-            self.places = places;
-            if ([self isViewLoaded]) {
-                [self.tableView reloadData];
-            }
-        }];
+        self.title = title;
     }
     return self;
 }
-							
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -54,5 +55,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PEWPlace *place = [self.places objectAtIndex:indexPath.row];
+    PEWPlaceViewControler *placeController = [[PEWPlaceViewControler alloc] initWithPlace:place];
+    [self.navigationController pushViewController:placeController animated:YES];
+}
 
 @end

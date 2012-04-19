@@ -9,6 +9,7 @@
 #import "PEWAppDelegate.h"
 
 #import "PEWPlacesTableViewController.h"
+#import "PEWCitiesTableViewController.h"
 
 @implementation PEWAppDelegate
 
@@ -19,10 +20,24 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[PEWPlacesTableViewController alloc] init];
-    viewController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    PEWPlacesTableViewController *allPlacesController = [[PEWPlacesTableViewController alloc] initWithTitle:NSLocalizedString(@"ALL_PLACES", nil)];
+    [PEWPlace fetchAllPlacesWithCompletionHandler:^(NSArray *places, NSError *error) {
+        allPlacesController.places = places;
+    }];
+    UINavigationController *firstController = [[UINavigationController alloc] initWithRootViewController:allPlacesController];
+    firstController.tabBarItem.title = NSLocalizedString(@"ALL_PLACES", nil);
+    firstController.tabBarItem.image = [UIImage imageNamed:@"first.png"];
+
+    PEWCitiesTableViewController *allCitiesController = [[PEWCitiesTableViewController alloc] init];
+    [PEWCity fetchAllCitiesWithCompletionHandler:^(NSArray *cities, NSError *error) {
+        allCitiesController.cities = cities;
+    }];
+    UINavigationController *secondController = [[UINavigationController alloc] initWithRootViewController:allCitiesController];
+    secondController.tabBarItem.title = NSLocalizedString(@"ALL_CITIES", nil);
+    secondController.tabBarItem.image = [UIImage imageNamed:@"first.png"];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:firstController, secondController, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

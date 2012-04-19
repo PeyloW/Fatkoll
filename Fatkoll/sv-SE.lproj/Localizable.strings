@@ -7,3 +7,7 @@
 */
 
 "ALL_PLACES" = "Alla Platser";
+"ALL_CITIES" = "Alla Städer";
+
+"OPEN_F" = "Öppet %@";
+"IS_ON_TAP" = "I fast kran";

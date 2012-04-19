@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6C6CAF61540906D0059ACE8 /* PEWCitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */; };
+		A6C6CAF91540965C0059ACE8 /* PEWTap.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAF81540965C0059ACE8 /* PEWTap.m */; };
+		A6C6CAFC15409B7E0059ACE8 /* PEWPlaceViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAFB15409B7E0059ACE8 /* PEWPlaceViewControler.m */; };
 		A6D295C1153600A70099FD6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C0153600A70099FD6C /* UIKit.framework */; };
 		A6D295C3153600A70099FD6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C2153600A70099FD6C /* Foundation.framework */; };
 		A6D295C5153600A70099FD6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D295C4153600A70099FD6C /* CoreGraphics.framework */; };
@@ -25,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6C6CAF41540906D0059ACE8 /* PEWCitiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWCitiesTableViewController.h; sourceTree = "<group>"; };
+		A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWCitiesTableViewController.m; sourceTree = "<group>"; };
+		A6C6CAF71540965C0059ACE8 /* PEWTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWTap.h; sourceTree = "<group>"; };
+		A6C6CAF81540965C0059ACE8 /* PEWTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWTap.m; sourceTree = "<group>"; };
+		A6C6CAFA15409B7E0059ACE8 /* PEWPlaceViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWPlaceViewControler.h; sourceTree = "<group>"; };
+		A6C6CAFB15409B7E0059ACE8 /* PEWPlaceViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWPlaceViewControler.m; sourceTree = "<group>"; };
 		A6D295BC153600A70099FD6C /* Fatkoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fatkoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D295C0153600A70099FD6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A6D295C2153600A70099FD6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,10 +136,12 @@
 			children = (
 				A6D295F915360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.h */,
 				A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */,
-				A6D295EE153604570099FD6C /* PEWPlace.h */,
-				A6D295EF153604570099FD6C /* PEWPlace.m */,
 				A6D295FE15360FA60099FD6C /* PEWCity.h */,
 				A6D295FF15360FA60099FD6C /* PEWCity.m */,
+				A6D295EE153604570099FD6C /* PEWPlace.h */,
+				A6D295EF153604570099FD6C /* PEWPlace.m */,
+				A6C6CAF71540965C0059ACE8 /* PEWTap.h */,
+				A6C6CAF81540965C0059ACE8 /* PEWTap.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -138,6 +149,12 @@
 		A6D295EC153600EC0099FD6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6D295D2153600A70099FD6C /* PEWPlacesTableViewController.h */,
+				A6D295D3153600A70099FD6C /* PEWPlacesTableViewController.m */,
+				A6C6CAF41540906D0059ACE8 /* PEWCitiesTableViewController.h */,
+				A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */,
+				A6C6CAFA15409B7E0059ACE8 /* PEWPlaceViewControler.h */,
+				A6C6CAFB15409B7E0059ACE8 /* PEWPlaceViewControler.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -145,8 +162,6 @@
 		A6D295ED153600F40099FD6C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A6D295D2153600A70099FD6C /* PEWPlacesTableViewController.h */,
-				A6D295D3153600A70099FD6C /* PEWPlacesTableViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -224,6 +239,9 @@
 				A6D295F0153604570099FD6C /* PEWPlace.m in Sources */,
 				A6D295FB15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m in Sources */,
 				A6D2960015360FA60099FD6C /* PEWCity.m in Sources */,
+				A6C6CAF61540906D0059ACE8 /* PEWCitiesTableViewController.m in Sources */,
+				A6C6CAF91540965C0059ACE8 /* PEWTap.m in Sources */,
+				A6C6CAFC15409B7E0059ACE8 /* PEWPlaceViewControler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +354,7 @@
 				A6D295EA153600A70099FD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

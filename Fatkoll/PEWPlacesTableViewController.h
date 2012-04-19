@@ -13,4 +13,6 @@
 
 @property (nonatomic, copy) NSArray *places;
 
+- (id)initWithTitle:(NSString *)title;
+
 @end
