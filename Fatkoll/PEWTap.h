@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PEWTypes.h"
 
 @interface PEWTap : NSObject
 
@@ -26,5 +27,7 @@
 + (void)fetchTapsForPlaceID:(NSInteger)placeID withCompletionHandler:(void(^)(NSArray *taps, NSError *error))handler;
 
 - (id)initWithJSONObject:(id)json;
+
+- (NSURL *)imageURLForSize:(PEWImageSize)size;
 
 @end

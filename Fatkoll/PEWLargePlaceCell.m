@@ -15,15 +15,6 @@
 
 static UIImage* placeHolderImage = nil;
 
-+ (void)load;
-{
-    @autoreleasepool {
-        UIGraphicsBeginImageContext(CGSizeMake(128, 128));   
-        placeHolderImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-    }
-}
-
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 {
     self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
@@ -31,6 +22,12 @@ static UIImage* placeHolderImage = nil;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.textLabel.numberOfLines = 2;
         self.detailTextLabel.numberOfLines = 3;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            UIGraphicsBeginImageContext(CGSizeMake(128, 128));   
+            placeHolderImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+        });
     }
     return self;
 }

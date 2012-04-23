@@ -12,4 +12,6 @@
 
 + (id)JSONObjectWithContentsOfURL:(NSURL *)url error:(NSError **)error;
 
++ (NSArray *)arrayWithImageURLsForDictionary:(NSDictionary *)dict;
+
 @end

@@ -10,6 +10,7 @@
 		A650DA8F1545BE34002F2EC4 /* PEWLargePlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */; };
 		A67BC39F1545D119003F8661 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A67BC39D1545D119003F8661 /* icon.png */; };
 		A67BC3A01545D119003F8661 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A67BC39E1545D119003F8661 /* icon@2x.png */; };
+		A67BC3A31545D914003F8661 /* PEWTapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A67BC3A21545D914003F8661 /* PEWTapCell.m */; };
 		A68403DC1545B3E0006709B4 /* PEWImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A68403DB1545B3DF006709B4 /* PEWImageCache.m */; };
 		A68403DF1545B7D7006709B4 /* PEWPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A68403DE1545B7D7006709B4 /* PEWPlaceCell.m */; };
 		A6C6CAF61540906D0059ACE8 /* PEWCitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */; };
@@ -37,6 +38,8 @@
 		A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWLargePlaceCell.m; sourceTree = "<group>"; };
 		A67BC39D1545D119003F8661 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A67BC39E1545D119003F8661 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		A67BC3A11545D914003F8661 /* PEWTapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWTapCell.h; sourceTree = "<group>"; };
+		A67BC3A21545D914003F8661 /* PEWTapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWTapCell.m; sourceTree = "<group>"; };
 		A68403D81545B2E2006709B4 /* PEWTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEWTypes.h; sourceTree = "<group>"; };
 		A68403DA1545B3DF006709B4 /* PEWImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWImageCache.h; sourceTree = "<group>"; };
 		A68403DB1545B3DF006709B4 /* PEWImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWImageCache.m; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				A68403DE1545B7D7006709B4 /* PEWPlaceCell.m */,
 				A650DA8D1545BE34002F2EC4 /* PEWLargePlaceCell.h */,
 				A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */,
+				A67BC3A11545D914003F8661 /* PEWTapCell.h */,
+				A67BC3A21545D914003F8661 /* PEWTapCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				A68403DC1545B3E0006709B4 /* PEWImageCache.m in Sources */,
 				A68403DF1545B7D7006709B4 /* PEWPlaceCell.m in Sources */,
 				A650DA8F1545BE34002F2EC4 /* PEWLargePlaceCell.m in Sources */,
+				A67BC3A31545D914003F8661 /* PEWTapCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

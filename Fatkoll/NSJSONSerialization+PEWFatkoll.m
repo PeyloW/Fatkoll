@@ -23,4 +23,17 @@
     return nil;
 }
 
++ (NSArray *)arrayWithImageURLsForDictionary:(NSDictionary *)dict;
+{
+    if (dict) {
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:4];
+        [array addObject:[NSURL URLWithString:[dict objectForKey:@"small"]]];
+        [array addObject:[NSURL URLWithString:[dict objectForKey:@"medium"]]];
+        [array addObject:[NSURL URLWithString:[dict objectForKey:@"large"]]];
+        [array addObject:[NSURL URLWithString:[dict objectForKey:@"original"]]];
+        return array;
+    }
+    return nil;
+}
+
 @end

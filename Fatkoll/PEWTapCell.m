@@ -1,20 +1,19 @@
 //
-//  PEWPlaceCell.m
+//  PEWTapCell.m
 //  Fatkoll
 //
 //  Created by Fredrik Olsson on 2012-04-23.
 //  Copyright (c) 2012 Fredrik Olsson. All rights reserved.
 //
 
-#import "PEWPlaceCell.h"
+#import "PEWTapCell.h"
 #import "PEWImageCache.h"
 
-@implementation PEWPlaceCell {
+@implementation PEWTapCell {
     __weak id fetchImageToken;
 }
 
 static UIImage* placeHolderImage = nil;
-
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 {
@@ -36,12 +35,16 @@ static UIImage* placeHolderImage = nil;
     return self;
 }
 
-- (void)setPlace:(PEWPlace *)place;
+- (void)setTap:(PEWTap *)tap;
 {
     self.imageView.image = placeHolderImage;
-    self.textLabel.text = place.name;
-    self.detailTextLabel.text = place.address;
-    NSURL *imageURL = [place imageURLForSize:PEWImageSizeMedium];
+    self.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", tap.name, tap.alchoholByVolume];
+    NSString *tapText = @"";
+    if (tap.houseTap || tap.caskTap) {
+        tapText = [@" " stringByAppendingString:NSLocalizedString(@"IS_ON_TAP", nil)];
+    }
+    self.detailTextLabel.text = [NSString stringWithFormat:@"%@%@ | %@", tap.priceInSEK, tapText, tap.breweryName];
+    NSURL *imageURL = [tap imageURLForSize:PEWImageSizeMedium];
     if (imageURL) {
         fetchImageToken = [[PEWImageCache defaultImageCache] fetchImageWithURL:imageURL completionHandler:^(UIImage *image) {
             self.imageView.image = image;

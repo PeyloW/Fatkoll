@@ -10,7 +10,7 @@
 
 @interface PEWPlace ()
 
-@property (nonatomic, copy) NSDictionary *imageURLs;
+@property (nonatomic, copy) NSArray *imageURLs;
 
 @end
 
@@ -82,23 +82,14 @@
         self.openHours = [json objectForKey:@"openhours"];
         self.numberOfTaps = [[json objectForKey:@"taps_count"] unsignedIntegerValue];
         self.URL = [NSURL URLWithString:[json objectForKey:@"url"]];
-        self.imageURLs = [json objectForKey:@"img"];
+        self.imageURLs = [NSJSONSerialization arrayWithImageURLsForDictionary:[json objectForKey:@"img"]];
     }
     return self;
 }
 
 - (NSURL *)imageURLForSize:(PEWImageSize)size;
 {
-    switch (size) {
-        case PEWImageSizeSmall:
-            return [NSURL URLWithString:[self.imageURLs objectForKey:@"small"]];
-        case PEWImageSizeMedium:
-            return [NSURL URLWithString:[self.imageURLs objectForKey:@"medium"]];
-        case PEWImageSizeLarge:
-            return [NSURL URLWithString:[self.imageURLs objectForKey:@"large"]];
-        case PEWImageSizeOriginal:
-            return [NSURL URLWithString:[self.imageURLs objectForKey:@"original"]];
-    }
+    return [self.imageURLs objectAtIndex:size];
 }
 
 @end

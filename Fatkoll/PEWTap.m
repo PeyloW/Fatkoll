@@ -8,6 +8,12 @@
 
 #import "PEWTap.h"
 
+@interface PEWTap ()
+
+@property (nonatomic, copy) NSArray *imageURLs;
+
+@end
+
 @implementation PEWTap
 
 @synthesize tapID = _tapID;
@@ -22,6 +28,7 @@
 @synthesize priceInSEK = _priceInSEK;
 @synthesize numberOfComments = _numberOfComments;
 @synthesize pingable = _pingable;
+@synthesize imageURLs = _imageURLs;
 
 + (void)fetchTapsForURL:(NSURL *)url withCompletionHandler:(void(^)(NSArray *taps, NSError *error))handler;
 {
@@ -70,8 +77,14 @@
         self.priceInSEK = [json objectForKey:@"price_sek"];
         self.numberOfComments = [[json objectForKey:@"comment_count"] integerValue];
         self.pingable = [[json objectForKey:@"pingable"] boolValue];
+        self.imageURLs = [NSJSONSerialization arrayWithImageURLsForDictionary:[json objectForKey:@"img"]];
     }
     return self;
+}
+
+- (NSURL *)imageURLForSize:(PEWImageSize)size;
+{
+    return [self.imageURLs objectAtIndex:size];
 }
 
 @end

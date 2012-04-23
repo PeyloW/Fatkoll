@@ -8,6 +8,7 @@
 
 #import "PEWPlaceViewControler.h"
 #import "PEWLargePlaceCell.h"
+#import "PEWTapCell.h"
 
 @interface PEWPlaceViewControler ()
 
@@ -23,7 +24,7 @@
     _taps = taps;
     if ([self isViewLoaded]) {
         [self.tableView insertSections:[NSIndexSet indexSetWithIndex:1] 
-                      withRowAnimation:UITableViewRowAnimationTop];
+                      withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
@@ -74,7 +75,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     if (indexPath.section == 0) {
-        return 110;
+        NSURL *url = [self.place imageURLForSize:PEWImageSizeLarge];
+        return url ? 110 : 66;
     } else {
         return 44;
     }
@@ -90,19 +92,12 @@
 - (UITableViewCell *)tapTableViewCellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     static NSString *cellID = @"CellID";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
+    PEWTapCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellID];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[PEWTapCell alloc] initWithReuseIdentifier:cellID];
     }
     PEWTap *tap = [self.taps objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", tap.name, tap.alchoholByVolume];
-    NSString *tapText = @"";
-    if (tap.houseTap || tap.caskTap) {
-        tapText = [@" " stringByAppendingString:NSLocalizedString(@"IS_ON_TAP", nil)];
-    }
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%@ | %@", tap.priceInSEK, tapText, tap.breweryName];
+    [cell setTap:tap];
     return cell;
 }
 
