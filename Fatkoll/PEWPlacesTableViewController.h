@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PEWPlace.h"
 
-@interface PEWPlacesTableViewController : UITableViewController
+@interface PEWPlacesTableViewController : UITableViewController <UISearchDisplayDelegate>
 
 @property (nonatomic, copy) NSArray *places;
 

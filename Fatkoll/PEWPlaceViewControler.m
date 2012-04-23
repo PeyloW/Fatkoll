@@ -7,6 +7,7 @@
 //
 
 #import "PEWPlaceViewControler.h"
+#import "PEWLargePlaceCell.h"
 
 @interface PEWPlaceViewControler ()
 
@@ -52,6 +53,14 @@
     return _taps ? 2 : 1;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+{
+    if (section == 1) {
+        return NSLocalizedString(@"AVAILABLE_TAPS", nil);
+    }
+    return nil;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
@@ -62,12 +71,19 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    if (indexPath.section == 0) {
+        return 110;
+    } else {
+        return 44;
+    }
+}
+
 - (UITableViewCell *)placeTableViewCell;
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                                   reuseIdentifier:nil];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", self.place.address, self.place.cityName];
-    cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"OPEN_F", nil), self.place.openHours];
+    PEWLargePlaceCell *cell = [[PEWLargePlaceCell alloc] initWithReuseIdentifier:nil];
+    [cell setPlace:self.place];
     return cell;
 }
 

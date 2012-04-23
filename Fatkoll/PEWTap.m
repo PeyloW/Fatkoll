@@ -34,7 +34,8 @@
                                                                                        error:&error];
                        if (json) {
                            taps = [NSMutableArray array];
-                           for (id tapJSON in [json objectForKey:@"list"]) {
+                           json = [[[json objectForKey:@"list"] lastObject] objectForKey:@"taps"];
+                           for (id tapJSON in json) {
                                PEWTap *tap = [[self alloc] initWithJSONObject:tapJSON];
                                [taps addObject:tap];
                            }

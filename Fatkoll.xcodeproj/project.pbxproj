@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A650DA8F1545BE34002F2EC4 /* PEWLargePlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */; };
+		A68403DC1545B3E0006709B4 /* PEWImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A68403DB1545B3DF006709B4 /* PEWImageCache.m */; };
+		A68403DF1545B7D7006709B4 /* PEWPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A68403DE1545B7D7006709B4 /* PEWPlaceCell.m */; };
 		A6C6CAF61540906D0059ACE8 /* PEWCitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */; };
 		A6C6CAF91540965C0059ACE8 /* PEWTap.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAF81540965C0059ACE8 /* PEWTap.m */; };
 		A6C6CAFC15409B7E0059ACE8 /* PEWPlaceViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6CAFB15409B7E0059ACE8 /* PEWPlaceViewControler.m */; };
@@ -28,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A650DA8D1545BE34002F2EC4 /* PEWLargePlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWLargePlaceCell.h; sourceTree = "<group>"; };
+		A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWLargePlaceCell.m; sourceTree = "<group>"; };
+		A68403D81545B2E2006709B4 /* PEWTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEWTypes.h; sourceTree = "<group>"; };
+		A68403DA1545B3DF006709B4 /* PEWImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWImageCache.h; sourceTree = "<group>"; };
+		A68403DB1545B3DF006709B4 /* PEWImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWImageCache.m; sourceTree = "<group>"; };
+		A68403DD1545B7D7006709B4 /* PEWPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWPlaceCell.h; sourceTree = "<group>"; };
+		A68403DE1545B7D7006709B4 /* PEWPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWPlaceCell.m; sourceTree = "<group>"; };
 		A6C6CAF41540906D0059ACE8 /* PEWCitiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWCitiesTableViewController.h; sourceTree = "<group>"; };
 		A6C6CAF51540906D0059ACE8 /* PEWCitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEWCitiesTableViewController.m; sourceTree = "<group>"; };
 		A6C6CAF71540965C0059ACE8 /* PEWTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEWTap.h; sourceTree = "<group>"; };
@@ -136,12 +146,15 @@
 			children = (
 				A6D295F915360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.h */,
 				A6D295FA15360C8E0099FD6C /* NSJSONSerialization+PEWFatkoll.m */,
+				A68403D81545B2E2006709B4 /* PEWTypes.h */,
 				A6D295FE15360FA60099FD6C /* PEWCity.h */,
 				A6D295FF15360FA60099FD6C /* PEWCity.m */,
 				A6D295EE153604570099FD6C /* PEWPlace.h */,
 				A6D295EF153604570099FD6C /* PEWPlace.m */,
 				A6C6CAF71540965C0059ACE8 /* PEWTap.h */,
 				A6C6CAF81540965C0059ACE8 /* PEWTap.m */,
+				A68403DA1545B3DF006709B4 /* PEWImageCache.h */,
+				A68403DB1545B3DF006709B4 /* PEWImageCache.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -162,6 +175,10 @@
 		A6D295ED153600F40099FD6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A68403DD1545B7D7006709B4 /* PEWPlaceCell.h */,
+				A68403DE1545B7D7006709B4 /* PEWPlaceCell.m */,
+				A650DA8D1545BE34002F2EC4 /* PEWLargePlaceCell.h */,
+				A650DA8E1545BE34002F2EC4 /* PEWLargePlaceCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -242,6 +259,9 @@
 				A6C6CAF61540906D0059ACE8 /* PEWCitiesTableViewController.m in Sources */,
 				A6C6CAF91540965C0059ACE8 /* PEWTap.m in Sources */,
 				A6C6CAFC15409B7E0059ACE8 /* PEWPlaceViewControler.m in Sources */,
+				A68403DC1545B3E0006709B4 /* PEWImageCache.m in Sources */,
+				A68403DF1545B7D7006709B4 /* PEWPlaceCell.m in Sources */,
+				A650DA8F1545BE34002F2EC4 /* PEWLargePlaceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

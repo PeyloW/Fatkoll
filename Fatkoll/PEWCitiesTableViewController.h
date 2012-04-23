@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PEWCity.h"
 
-@interface PEWCitiesTableViewController : UITableViewController
+@interface PEWCitiesTableViewController : UITableViewController <UISearchDisplayDelegate>
 
 @property (nonatomic, copy) NSArray *cities;
 

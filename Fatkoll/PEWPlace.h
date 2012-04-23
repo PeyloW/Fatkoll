@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PEWTypes.h"
 
 @interface PEWPlace : NSObject
 
@@ -25,5 +26,7 @@
 + (void)fetchPlacesWithMaximumDistance:(CLLocationDistance)distance fromLocation:(CLLocation *)location withCompletionHandler:(void(^)(NSArray *places, NSError *error))handler;
 
 - (id)initWithJSONObject:(id)json;
+
+- (NSURL *)imageURLForSize:(PEWImageSize)size;
 
 @end

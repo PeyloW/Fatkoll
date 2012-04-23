@@ -10,9 +10,21 @@
 #import "PEWPlace.h"
 #import "PEWPlacesTableViewController.h"
 
-@implementation PEWCitiesTableViewController
+@implementation PEWCitiesTableViewController {
+    NSArray *filteredCities;
+    UISearchDisplayController *searchController;
+}
 
 @synthesize cities = _cities;
+
+- (NSArray *)citiesForTableView:(UITableView *)tableView;
+{
+    if (self.tableView == tableView) {
+        return self.cities;
+    } else {
+        return filteredCities;
+    }
+}
 
 - (void)setCities:(NSArray *)cities;
 {
@@ -31,6 +43,21 @@
     return self;
 }
 
+- (void)viewDidLoad;
+{
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];;
+    self.tableView.tableHeaderView = searchBar;
+    searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar
+                                                         contentsController:self];
+    searchController.delegate = self;
+    searchController.searchResultsDataSource = self;
+    searchController.searchResultsDelegate = self;
+}
+
+- (void)viewDidUnload;
+{
+    searchController = nil;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -42,7 +69,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.cities count];
+    return [[self citiesForTableView:tableView] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,7 +81,7 @@
                                       reuseIdentifier:cellID];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    PEWCity *city = [self.cities objectAtIndex:indexPath.row];
+    PEWCity *city = [[self citiesForTableView:tableView] objectAtIndex:indexPath.row];
     cell.textLabel.text = city.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", city.numberOfPlaces];
     return cell;
@@ -66,13 +93,28 @@
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    PEWCity *city = [self.cities objectAtIndex:indexPath.row];
+    PEWCity *city = [[self citiesForTableView:tableView] objectAtIndex:indexPath.row];
     PEWPlacesTableViewController *placesController = [[PEWPlacesTableViewController alloc] initWithTitle:city.name];
     [PEWPlace fetchPlacesForCityID:city.cityID
              withCompletionHandler:^(NSArray *places, NSError *error) {
                  placesController.places = places;
              }];
     [self.navigationController pushViewController:placesController animated:YES];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString;
+{
+    if ([searchString length]) {
+        filteredCities = [self.cities filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(PEWCity *city, NSDictionary *bindings) {
+            if ([city.name rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+                return YES;
+            }            
+            return NO;
+        }]];
+    } else {
+        filteredCities = nil;
+    }
+    return YES;
 }
 
 @end

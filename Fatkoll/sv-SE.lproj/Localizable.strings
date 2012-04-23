@@ -11,3 +11,5 @@
 
 "OPEN_F" = "Öppet %@";
 "IS_ON_TAP" = "I fast kran";
+
+"AVAILABLE_TAPS" = "Alla kranar";
